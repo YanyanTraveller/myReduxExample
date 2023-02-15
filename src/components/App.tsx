@@ -6,6 +6,7 @@ import Header from "./common/header";
 import PageNotFound from "./pageNotFound";
 import CoursePage from "./courses/CoursePage";
 import ManageCoursePage from "./courses/ManageCoursePage";
+import GptPage from "./gptPage";
 
 function App(){
     return (<div className="container-fluid">
@@ -15,6 +16,7 @@ function App(){
         <Route path="/about"><AboutPage></AboutPage></Route>
         <Route path="/courses"><CoursePage></CoursePage></Route>
         <Route path="/course/:slug" component={ManageCoursePage} />
+        <Route path="/gptapi" component={GptPage} /> 
         <Route path="/course" component={ManageCoursePage} />
         <Route component={PageNotFound}></Route>
         </Switch>
